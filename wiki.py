@@ -1,13 +1,21 @@
 import wikipedia
 
 
-def wiki(lang, topic):
+def wiki_english(topic):
     try:
-        la = lang.lower()
-        wikipedia.set_lang(la)
+        wikipedia.set_lang('en')
         result = str(wikipedia.summary(topic))
     except:
-        result = "NOT FOUND! or Verify your lang prefix"
+        result = "NOT FOUND! Try another topic"
+    return result
+
+
+def wiki_tamil(topic):
+    try:
+        wikipedia.set_lang('ta')
+        result = str(wikipedia.summary(topic))
+    except:
+        result = "NOT FOUND! Try another topic"
     return result
 
 
@@ -41,3 +49,4 @@ langs = ['aa', 'ab', 'abs', 'ace', 'ady', 'ady-cyrl', 'aeb', 'aeb-arab', 'aeb-la
          'ur', 'uz', 'uz-cyrl', 'uz-latn', 've', 'vec', 'vep', 'vi', 'vls', 'vmf', 'vo', 'vot', 'vro', 'wa', 'war',
          'wo', 'wuu', 'xal', 'xh', 'xmf', 'xsy', 'yi', 'yo', 'yue', 'za', 'zea', 'zgh', 'zh', 'zh-classical', 'zh-cn',
          'zh-hans', 'zh-hant', 'zh-hk', 'zh-min-nan', 'zh-mo', 'zh-my', 'zh-sg', 'zh-tw', 'zh-yue', 'zu']
+

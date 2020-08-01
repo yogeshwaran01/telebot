@@ -1,16 +1,22 @@
 def helper():
     result = """
-    
+Main usage:
+    (TRANSLATIONS)
+    TAMIL --- > ENGLISH
+    ENGLISH --- > TAMIL
+Some features:
+    ta any topic --> short passage about topic in          tamil
+    en any topic --> short passage about topic in          english
+    (Read the passage and understand the meanings)
+Some additional features:
     * your_name ==> Gives Expand form of your name and its describe your character
                                         (ex: * dhoni)
-# name_1 name_2 ==> Gives FLAMES b\w name_1 and name_2
+    # name_1 name_2 ==> Gives FLAMES between name_1 and name_2
                                         (ex: # dhoni virat)
-lang_pre topic ==> Gives Short note of your topic with your's specified language
-                                        (ex: en google)
-author ==> Gives the name of this Bot Creator
-name ==> Gives the name of this bot
-username ==> Gives the username of this bot
-
-    
+About:
+    author ==> Gives the name of this Bot           Creator
+    name ==> Gives the name of this bot
+    username ==> Gives the username of this bot
+    help ==> To see the Descriptions
     """
     return result
