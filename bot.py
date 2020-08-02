@@ -98,7 +98,10 @@ while True:
 
             from_id = item["message"]["from"]["id"]
             first_name = item["message"]["from"]["first_name"]
-            last_name = item["message"]["from"]["last_name"]
+            try:
+                last_name = item["message"]["from"]["last_name"]
+            except:
+                last_name = ""
             name = format_user_name(first_name, last_name)
             date = datetime.fromtimestamp(item["message"]["date"])
             print("{} from {} at {}".format(message, name, date))
