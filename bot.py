@@ -30,7 +30,10 @@ def get_updates(offset=None):
 
 
 def send_message(msg, chat_id):
-    bot.send_message(chat_id=chat_id, text=msg, parse_mode=telegram.ParseMode.HTML)
+    try:
+        bot.send_message(chat_id=chat_id, text=msg, parse_mode=telegram.ParseMode.HTML)
+    except:
+        bot.send_message(chat_id=chat_id, text="Sorry try again", parse_mode=telegram.ParseMode.HTML)
 
 
 def output_personal(input_message, user_name):
@@ -84,29 +87,25 @@ def output_personal(input_message, user_name):
 
 update_id = None
 
-try:
+while True:
+    print("...")
+    updates = get_updates(offset=update_id)
+    updates = updates["result"]
+    if updates:
+        for item in updates:
+            update_id = item["update_id"]
+            try:
+                message = str(item["message"]["text"])
+            except:
+                message = None
 
-    while True:
-        print("...")
-        updates = get_updates(offset=update_id)
-        updates = updates["result"]
-        if updates:
-            for item in updates:
-                update_id = item["update_id"]
-                try:
-                    message = str(item["message"]["text"])
-                except:
-                    message = None
-
-                from_id = item["message"]["from"]["id"]
-                first_name = item["message"]["from"]["first_name"]
-                try:
-                    last_name = item["message"]["from"]["last_name"]
-                except:
-                    last_name = ""
-                name = format_user_name(first_name, last_name)
-                date = datetime.fromtimestamp(item["message"]["date"])
-                print("{} from {} at {}".format(message, name, date))
-                send_message(output_personal(message, name), from_id)
-except:
-    bot.send_message(chat_id=1071607407, text="Bot has some failures", parse_mode=telegram.ParseMode.HTML)
+            from_id = item["message"]["from"]["id"]
+            first_name = item["message"]["from"]["first_name"]
+            try:
+                last_name = item["message"]["from"]["last_name"]
+            except:
+                last_name = ""
+            name = format_user_name(first_name, last_name)
+            date = datetime.fromtimestamp(item["message"]["date"])
+            print("{} from {} at {}".format(message, name, date))
+            send_message(output_personal(message, name), from_id)
