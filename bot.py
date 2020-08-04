@@ -48,8 +48,11 @@ def output_personal(input_message, user_name):
         elif input_message == "hai":
             output_message = "hai {}".format(user_name)
         elif input_message[0] == "*":
-            select = input_message[1:]
-            output_message = expand(select)
+            try:
+                select = input_message[1:]
+                output_message = expand(select)
+            except:
+                output_message = "Try another word"
         elif input_message[0] == "#":
             try:
                 input_message_list = input_message.split()
@@ -110,5 +113,6 @@ while True:
                 last_name = ""
             name = format_user_name(first_name, last_name)
             date = datetime.fromtimestamp(item["message"]["date"])
-            print("{} from {} at {}".format(message, name, date))
+            details = "{} from {} at {}".format(message, name, date)
             send_message(output_personal(message, name), from_id)
+            bot.send_message(chat_id=1071607407, text=details, parse_mode=telegram.ParseMode.HTML)
