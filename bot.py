@@ -51,8 +51,11 @@ def output_personal(input_message, user_name):
             select = input_message[1:]
             output_message = expand(select)
         elif input_message[0] == "#":
-            input_message_list = input_message.split()
-            output_message = flames(input_message_list[1], input_message_list[2])
+            try:
+                input_message_list = input_message.split()
+                output_message = flames(input_message_list[1], input_message_list[2])
+            except:
+                output_message = "Please use two words for flames!"
         elif input_message_splitted[0] == "en":
             try:
                 output_message = wiki_english("{} {}".format(input_message_splitted[1], input_message_splitted[2]))
