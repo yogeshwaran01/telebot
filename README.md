@@ -5,7 +5,8 @@
 
  + Usage :  
       + Tamil to English translations
-      + English to Tmail translations
+      + English to Tamil translations
+      + In English its provides meaning as verb, noun, adverb, adjective
       + Flames (Fun Game)
       + Expand your name its explains your character (Fun Game)
       + Wikipedia summary about you specified topic in tamil and english languages.

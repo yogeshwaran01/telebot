@@ -6,8 +6,9 @@ Welcome {}, I am Excel, a Bot I have some features
 Main usage:
 ==========
     (TRANSLATIONS)
-    TAMIL --- > ENGLISH
     ENGLISH --- > TAMIL
+    TAMIL --- > ENGLISH
+    If you provide a single english word it gives meaning of a word as Noun,Verb,Adjective,Adverb and tamil meaning
 -----------------------------------------
 Some features:
 =============
@@ -24,7 +25,7 @@ Some additional features:
 -----------------------------------------                                        
 About:
 =====
-    !author ==> Gives the name of this Bot           Creator
+    !developer ==> Gives the name of this Bot           developer
     !name ==> Gives the name of this bot
     !username ==> Gives the username of this bot
     !help ==> To see the Descriptions

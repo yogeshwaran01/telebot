@@ -9,6 +9,7 @@ from telebot.flames import flames
 from telebot.wiki import wiki_english, wiki_tamil
 from telebot.help import helper
 from telebot.translate import translate_to_tamil, translate_to_english
+from telebot.dicts import meaning
 
 api = "https://api.telegram.org/bot{}/".format(token)
 bot = telegram.Bot(token=token)
@@ -69,7 +70,7 @@ def output_personal(input_message, user_name):
                 output_message = wiki_tamil("{} {}".format(input_message_splitted[1], input_message_splitted[2]))
             except IndexError:
                 output_message = wiki_tamil(input_message_splitted[1])
-        elif input_message == "!author":
+        elif input_message == "!developer":
             output_message = "YOGESHWARAN R"
         elif input_message == "/start":
             output_message = helper(user_name)
@@ -81,11 +82,17 @@ def output_personal(input_message, user_name):
             try:
                 a = detect(input_message)
                 if a == "en":
-                    output_message = translate_to_tamil(input_message)
+                    if len(input_message_splitted) == 1:
+                        output_message = meaning(input_message)
+                    else:
+                        output_message = translate_to_tamil(input_message)
                 elif a == "ta":
                     output_message = translate_to_english(input_message)
                 else:
-                    output_message = translate_to_tamil(input_message)
+                    if len(input_message_splitted) == 1:
+                        output_message = meaning(input_message)
+                    else:
+                        output_message = translate_to_tamil(input_message)
             except:
                 output_message = "Not Available!"
         return output_message
