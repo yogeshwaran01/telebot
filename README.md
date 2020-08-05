@@ -1,6 +1,5 @@
 # Telebot
 
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/d0d5833b034442b6a18709f3ee5b7803)](https://app.codacy.com/manual/yogeshwaran01/telebot?utm_source=github.com&utm_medium=referral&utm_content=yogeshwaran01/telebot&utm_campaign=Badge_Grade_Dashboard)
 
 
 + Name : Excel
