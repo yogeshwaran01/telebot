@@ -1,19 +1,27 @@
 import telegram
+import num2word as digit
 import requests
 import json
 from datetime import datetime
 from langdetect import detect
-from telebot.config import token
-from telebot.expand import expand
-from telebot.flames import flames
-from telebot.wiki import wiki_english, wiki_tamil
-from telebot.help import helper
-from telebot.translate import translate_to_tamil, translate_to_english
-from telebot.dicts import meaning
+from config import token
+from expand import expand
+from flames import flames
+from wiki import wiki_english, wiki_tamil
+from help import helper
+from translate import translate_to_tamil, translate_to_english
+from dicts import meaning
 
 api = "https://api.telegram.org/bot{}/".format(token)
 bot = telegram.Bot(token=token)
 
+def isNumber(s) :
+
+    for i in range(len(s)) :
+        if s[i].isdigit() != True :
+            return False
+
+    return True
 
 def format_user_name(first, last):
     try:
@@ -78,6 +86,9 @@ def output_personal(input_message, user_name):
             output_message = helper(user_name)
         elif input_message == "!username":
             output_message = "@excelyo_bot"
+        elif isNumber(input_message):
+            output_message = digit.word(input_message)
+
         else:
             try:
                 a = detect(input_message)
