@@ -8,6 +8,7 @@
  + Usage :  
       + Tamil to English translations.
       + English to Tamil translations.
+      + Any number to english words
       + In English its provides meaning as verb, noun, adverb, adjective.
       + Flames (Fun Game).
       + Expand your name its explains your character (Fun Game).
