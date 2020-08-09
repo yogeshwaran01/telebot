@@ -1,7 +1,7 @@
 def helper(username):
     result = """
 
-Welcome {}, I am Excel, a Bot I have some features   
+Welcome {}, I am Excel, a Bot I have some features
 
 Main usage:
 ==========
@@ -18,11 +18,13 @@ Some features:
 -----------------------------------------
 Some additional features:
 ========================
+    Any number convert to words of that number
+                                        (ex: 100 gives one hundread)
     * your_name ==> Gives Expand form of your name and its describe your character
                                         (ex: * dhoni)
     # name_1 name_2 ==> Gives FLAMES between name_1 and name_2
                                         (ex: # dhoni virat)
------------------------------------------                                        
+-----------------------------------------
 About:
 =====
     !developer ==> Gives the name of this Bot           developer
