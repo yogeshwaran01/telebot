@@ -15,13 +15,14 @@ from dicts import meaning
 api = "https://api.telegram.org/bot{}/".format(token)
 bot = telegram.Bot(token=token)
 
-def isNumber(s) :
 
-    for i in range(len(s)) :
-        if s[i].isdigit() != True :
+def isNumber(s):
+    for i in range(len(s)):
+        if not s[i].isdigit():
             return False
 
     return True
+
 
 def format_user_name(first, last):
     try:
