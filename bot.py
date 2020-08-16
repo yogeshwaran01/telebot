@@ -11,6 +11,7 @@ from wiki import wiki_english, wiki_tamil
 from help import helper
 from translate import translate_to_tamil, translate_to_english
 from dicts import meaning
+from track import phone_number_detail
 
 api = "https://api.telegram.org/bot{}/".format(token)
 bot = telegram.Bot(token=token)
@@ -80,7 +81,7 @@ def output_personal(input_message, user_name):
             except IndexError:
                 output_message = wiki_tamil(input_message_splitted[1])
         elif input_message == "!developer":
-            output_message = "YOGESHWARAN R"
+            output_message = "YOGESHWARAN R \n Python 3.8"
         elif input_message == "/start":
             output_message = helper(user_name)
         elif input_message == "!help":
@@ -88,8 +89,10 @@ def output_personal(input_message, user_name):
         elif input_message == "!username":
             output_message = "@excelyo_bot"
         elif isNumber(input_message):
-            output_message = digit.word(input_message)
-
+            try:
+                output_message = phone_number_detail(input_message)
+            except:
+                output_message = digit.word(input_message)
         else:
             try:
                 a = detect(input_message)
@@ -133,7 +136,7 @@ while True:
                     last_name = ""
                 name = format_user_name(first_name, last_name)
                 date = datetime.fromtimestamp(item["message"]["date"])
-                details = "{} from {} at {}".format(message, name, date)
+                details = "'{}' from {} at {}".format(message, name, date)
                 send_message(output_personal(message, name), from_id)
                 bot.send_message(chat_id=1071607407, text=details, parse_mode=telegram.ParseMode.HTML)
     except:
