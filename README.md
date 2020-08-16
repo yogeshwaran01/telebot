@@ -14,4 +14,3 @@
       + Expand your name its explains your character (Fun Game).
       + Wikipedia summary about you specified topic in tamil and english languages.
       + By this bot you get some English Knowledge.
-      + Track any mobile number.
