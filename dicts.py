@@ -75,6 +75,12 @@ Tamil Meaning:
 -------------
 {}
 
-    """.format(text.title(), string_of_mean_noun, string_of_mean_verb, string_of_mean_adj, string_of_mean_adv,
-               translate_to_tamil(text))
+    """.format(
+        text.title(),
+        string_of_mean_noun,
+        string_of_mean_verb,
+        string_of_mean_adj,
+        string_of_mean_adv,
+        translate_to_tamil(text),
+    )
     return final

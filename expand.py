@@ -5,29 +5,120 @@
 """
 import random
 
-A = ["active", "adorable", "afraid", "alert", "ambitous", "amusing", "angry", "attentive", "argumentative",
-     "adventurous"]
+A = [
+    "active",
+    "adorable",
+    "afraid",
+    "alert",
+    "ambitous",
+    "amusing",
+    "angry",
+    "attentive",
+    "argumentative",
+    "adventurous",
+]
 B = ["bashful", "boring", "bossy", "brainy", "brave", "bright", "busy", "brilliant"]
-C = ["capable", "calm", "careful", "cautious", "charismatic", "cheerful", "eager", "clever", "clumsy", "confident",
-     "curious"]
-D = [" daring", " decisive", "dedicated", "delightful", "demanding", "detailed", "determined", "dreamer"]
+C = [
+    "capable",
+    "calm",
+    "careful",
+    "cautious",
+    "charismatic",
+    "cheerful",
+    "eager",
+    "clever",
+    "clumsy",
+    "confident",
+    "curious",
+]
+D = [
+    " daring",
+    " decisive",
+    "dedicated",
+    "delightful",
+    "demanding",
+    "detailed",
+    "determined",
+    "dreamer",
+]
 E = ["eager", "easygoing", "efficient", "enchanting", "energetic", "enthusiastic"]
-F = ["fun", "fearless", "fair", "foolish", "forgiving", "friendly", "forgetful", "fortunate", "flexible"]
+F = [
+    "fun",
+    "fearless",
+    "fair",
+    "foolish",
+    "forgiving",
+    "friendly",
+    "forgetful",
+    "fortunate",
+    "flexible",
+]
 G = ["generous", "gentle ", "giving", "glamorous", "graceful", "greedy"]
-H = ["happy", "hard working", "healthy", "helpful", "heroic", "honest", "helpful", "hilarious", "hungry", "humorous"]
-I = ["imaginative", "immature", "impatient", "impulsive", "inventive", "intelligent", "industrious", "independent"]
+H = [
+    "happy",
+    "hard working",
+    "healthy",
+    "helpful",
+    "heroic",
+    "honest",
+    "helpful",
+    "hilarious",
+    "hungry",
+    "humorous",
+]
+I = [
+    "imaginative",
+    "immature",
+    "impatient",
+    "impulsive",
+    "inventive",
+    "intelligent",
+    "industrious",
+    "independent",
+]
 J = ["jelous", "jolly", "joyful"]
 K = ["kind", "knowledgeable"]
 L = ["lazy", "leader", "likable", "lonely", "loud", "loving", "loyal", "lucky"]
 M = ["mannerly", "mature", "mean", "mean", "messy", "moody", "mysterious"]
 N = ["naughty", "neat", "nervous", "noisy", "nature lover"]
 O = ["obedient", "anxious", "observant", "optimistic", "outgoing", "outstanding"]
-P = ["polite", "perfect", "picky", "pleasant", "proud", "productive", "playful", "persistent"]
+P = [
+    "polite",
+    "perfect",
+    "picky",
+    "pleasant",
+    "proud",
+    "productive",
+    "playful",
+    "persistent",
+]
 Q = ["qualified"]
 R = ["relaxed", "reliable", "respectful", "rude", "respectful", "responsible"]
-S = ["secretive", "selfish", "sensitive", "shy", "sincere", "smart", "sweet", "successful", "silly", "sneaky",
-     "studious", "stubborn"]
-T = ["talented", "talkative", "tall", "thankful", "timid", "tired", "tough", "tolerant", "thoughtful"]
+S = [
+    "secretive",
+    "selfish",
+    "sensitive",
+    "shy",
+    "sincere",
+    "smart",
+    "sweet",
+    "successful",
+    "silly",
+    "sneaky",
+    "studious",
+    "stubborn",
+]
+T = [
+    "talented",
+    "talkative",
+    "tall",
+    "thankful",
+    "timid",
+    "tired",
+    "tough",
+    "tolerant",
+    "thoughtful",
+]
 U = ["understanding", "ususual", "upset", "useful", "unselfish"]
 V = ["valiant", "valuable", "vocal", "vivacious"]
 W = ["welcoming", "willing", "wise", "witty"]

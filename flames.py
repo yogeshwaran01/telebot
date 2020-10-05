@@ -34,9 +34,9 @@ def flames(p1, p2):
 
         star_index = con_list.index("*")
 
-        p1_list = con_list[: star_index]
+        p1_list = con_list[:star_index]
 
-        p2_list = con_list[star_index + 1:]
+        p2_list = con_list[star_index + 1 :]
 
     # count total remaining characters
     count = len(p1_list) + len(p2_list)
@@ -46,12 +46,12 @@ def flames(p1, p2):
 
     while len(result) > 1:
 
-        split_index = (count % len(result) - 1)
+        split_index = count % len(result) - 1
 
         if split_index >= 0:
 
-            right = result[split_index + 1:]
-            left = result[: split_index]
+            right = result[split_index + 1 :]
+            left = result[:split_index]
 
             result = right + left
 
