@@ -22,6 +22,8 @@ def respond(chat_id, text, first_name, lang):
             text = "media files"
         if text == "/start":
             welcome_user(first_name, chat_id)
+            helper(first_name)
+            about_developer(chat_id)
         elif text == "/developer":
             about_developer(chat_id)
         elif text == "/username":
