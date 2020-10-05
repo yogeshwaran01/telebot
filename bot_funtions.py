@@ -50,8 +50,9 @@ def format_user_name(first, last):
 
 def welcome_user(first, chat_id):
     msg = f"""
+    
     Hi! {first} 
-    My name is Excel 
+    My name is Excel
     """
     send_message_to_user(msg, chat_id)
 
@@ -78,12 +79,13 @@ def isNumber(s):
 
 def about_developer(chat_id):
     msg = """
+    
     Name: YOGESHWARAN R
     Lang: Python 3.8
     GitHub: https://github.com/yogeshwaran01
-    Website: https://yogeshwaran.herokuapp.com
 
     """
+    send_message_to_user("Developer", chat_id)
     send_message_to_user(msg, chat_id)
 
 

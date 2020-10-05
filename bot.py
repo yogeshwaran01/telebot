@@ -40,24 +40,31 @@ def respond(chat_id, text, first_name, lang):
             send_message_of_translation(lang, text, chat_id)
         return "ok"
     except:
-        failed_message()
-        return "not ok"
+        send_message_to_devolper("some errors")
+        pass
+    
 
 
 update_id = None
 
-while True:
-    updates = get_updates(offset=update_id)
-    updates = updates["result"]
-    if updates:
-        for item in updates:
-            update_id = item["update_id"]
-            from_id = item["message"]["from"]["id"]
-            try:
-                message = str(item["message"]["text"])
-            except:
-                send_message_to_user("Don't send media files",from_id )
-                message = "Don't send media files"
-            username = item["message"]["from"]["username"]
-            lang = item["message"]["from"]["language_code"]
-            respond(from_id, message, username, lang)
+try:
+    while True:
+        updates = get_updates(offset=update_id)
+        updates = updates["result"]
+        if updates:
+            for item in updates:
+                update_id = item["update_id"]
+                from_id = item["message"]["from"]["id"]
+                try:
+                    message = str(item["message"]["text"])
+                except:
+                    send_message_to_user("Don't send media files",from_id )
+                    message = "Don't send media files"
+                try:
+                    username = item["message"]["from"]["username"]
+                except:
+                    username = item["message"]["from"]["first_name"]
+                lang = item["message"]["from"]["language_code"]
+                respond(from_id, message, username, lang)
+except:
+    failed_message()
